@@ -1,0 +1,3 @@
+{{ range . -}}
+<a href="{{ .url }}" target="_blank" rel="noopener"><span class="screen-reader-text">{{ .name }}</span>{{ partial "svg.html" . }}</a>
+{{- end }}

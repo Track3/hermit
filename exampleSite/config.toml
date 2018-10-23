@@ -1,0 +1,58 @@
+baseURL = "https://example.com"
+languageCode = "en-us"
+title = "Hugo Hermit"
+theme = "hermit"
+# enableGitInfo = true
+pygmentsCodefences  = true
+pygmentsUseClasses  = true
+hasCJKLanguage = true  # If there're Chinese/Japanese/Korean Languages in the content, enable this.
+rssLimit = 10  # Maximum number of items in the RSS feed.
+copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This is only used by RSS template.
+# googleAnalytics = "UA-123-45"
+# disqusShortname = "yourdiscussshortname"
+
+[author]
+  name = "John Doe"
+
+[blackfriday]
+  hrefTargetBlank = true
+
+[taxonomies]
+  tag = "tags"
+  category = ""  # Categories are disabled by default.
+
+[params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04 -0700"
+
+  # themeColor = "#494f5c"  # Theme color in meta tags.
+  homeSubtitle = "A minimal and fast theme for Hugo."
+  footerCopyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+  # gitUrl = "https://github.com/Someone/SomeRepo/commit/" # Prefix of link to you git commit detail page. GitInfo must be enabled. 
+  justifyContent = false  # Set "text-align: justify" to .content
+
+  [[params.social]]
+    name = "twitter"
+    url = "https://twitter.com/"
+
+  [[params.social]]
+    name = "instagram"
+    url = "https://instagram.com/"
+
+  [[params.social]]
+    name = "github"
+    url = "https://github.com/"
+
+[menu]
+
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 10
+
+  [[menu.main]]
+    name = "About"
+    url = "/about-hugo/"
+    weight = 20

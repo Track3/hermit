@@ -1,0 +1,20 @@
+{{ define "header" }}
+{{ partialCached "header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+	<main class="site-main section-inner thin animated fadeIn faster">
+		<h1>{{ .Title }}</h1>
+		<div class="content">
+			{{ .Content }}
+		</div>
+		{{- with .Params.comments }}
+		{{ with .Site.DisqusShortname }}{{ partialCached "disqus.html" . }}{{ end }}
+		{{- end }}
+	</main>
+{{ end }}
+
+{{ define "footer" }}
+{{ partialCached "footer.html" . }}
+	<script>let haveHeader = true;</script>
+{{ end }}
