@@ -1,4 +1,7 @@
 {{ define "main" }}
+	{{- with .Site.Params.bgImg }}
+	<div class="bg-img" style="background-image: url('{{ . }}')"></div>
+	{{- end }}
 	<div id="spotlight" class="animated fadeIn">
 		<div id="home-center">
 			<h1 id="home-title">{{ .Site.Title }}</h1>

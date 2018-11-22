@@ -32,6 +32,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
   footerCopyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
   # gitUrl = "https://github.com/Someone/SomeRepo/commit/" # Prefix of link to you git commit detail page. GitInfo must be enabled. 
   justifyContent = false  # Set "text-align: justify" to .content
+  # bgImg = ""  #  Homepage background-image URL
 
   [[params.social]]
     name = "twitter"
