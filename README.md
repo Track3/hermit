@@ -54,6 +54,7 @@ The following icons are supported, please make sure the `name` filed is exactly 
 * codepen
 * facebook
 * github
+* gitlab
 * instagram
 * linkedin
 * slack
