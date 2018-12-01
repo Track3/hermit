@@ -8,6 +8,7 @@ pygmentsUseClasses  = true
 hasCJKLanguage = true  # If there're Chinese/Japanese/Korean Languages in the content, enable this.
 rssLimit = 10  # Maximum number of items in the RSS feed.
 copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
+enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/functions/emojify/
 # googleAnalytics = "UA-123-45"
 # disqusShortname = "yourdiscussshortname"
 
