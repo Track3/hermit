@@ -562,6 +562,7 @@ a.footnote-return {
   display: flex;
   justify-content: space-between;
   margin-top: 1.5em;
+  margin-bottom: 2.5em;
   font-size: 1.2em;
 
   a {
@@ -577,6 +578,16 @@ a.footnote-return {
     opacity: .8;
     text-transform: uppercase;
   }
+}
+
+// Disqus
+#disqus {
+  margin-top: 2.5em;
+}
+
+.dsq-brlink {
+  display: block;
+  text-align: center;
 }
 
 @media (min-width: 800px) {

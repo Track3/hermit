@@ -44,8 +44,10 @@
 			</a>
 			{{- end }}
 		</div>
-		{{- with .Site.DisqusShortname }}
-		{{ partialCached "disqus.html" . }}
+		{{- if .Site.DisqusShortname }}
+		<div id="disqus" class="thin">
+			{{ template "_internal/disqus.html" . }}
+		</div>
 		{{- end }}
 	</main>
 {{ end }}
