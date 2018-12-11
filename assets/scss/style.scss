@@ -196,6 +196,7 @@ table {
 .hdr-wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: .5em 0;
   font-size: 1.2rem;
 
@@ -217,10 +218,14 @@ table {
 }
 
 .hdr-icons {
-  display: inline-block;
   font-size: 1.2em;
+}
 
-  a {
+.hdr-social {
+  display: inline-block;
+  margin-left: .6em;
+
+  &>a {
     margin-left: .4em;
   }
 }
@@ -232,9 +237,9 @@ table {
   cursor: pointer;
 }
 
-#menu-btn,
-#search-btn {
+#menu-btn {
   display: none;
+  margin-left: .7em;
   cursor: pointer;
 }
 
@@ -448,10 +453,6 @@ p.img-404 {
 .show-bg-img {
   z-index: 100;
   opacity: 1;
-}
-
-#show-img-btn {
-  margin-right: .3em;
 }
 
 .post-header {
