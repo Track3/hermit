@@ -24,6 +24,11 @@ Run this command from the root of your Hugo directory (Git needs to be installed
 ```bash
 $ git clone https://github.com/Track3/hermit.git themes/hermit
 ```
+Alternatively, you can include this repository as a [git submodule](https://git-scm.com/book/de/v1/Git-Tools-Submodule). This makes it easier to update this theme if you have your Hugo site in git as well. For this you need to run:
+
+```bash
+$ git submodule add https://github.com/Track3/hermit.git themes/sam
+```
 
 Alternatively, if you are not familiar with git, you can download the theme as a `.zip` file, unzip the theme contents, and then move the unzipped source into your `themes` directory.
 
