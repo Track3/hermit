@@ -1,0 +1,24 @@
+# Translations for English
+# https://gohugo.io/content-management/multilingual/#translation-of-strings
+
+# 404.html
+#
+[notFound]
+other = "Oops, page not found…"
+
+[home]
+other = "Home"
+
+[archives]
+other = "Archives"
+
+# posts/single.html
+#
+[wordCount]
+other = "{{ .WordCount }} Words"
+
+[newer]
+other = "Newer"
+
+[older]
+other = "Older"

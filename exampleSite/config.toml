@@ -1,5 +1,6 @@
 baseURL = "https://example.com"
 languageCode = "en-us"
+defaultContentLanguage = "en"
 title = "Hugo Hermit"
 theme = "hermit"
 # enableGitInfo = true
