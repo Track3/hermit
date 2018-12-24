@@ -32,6 +32,12 @@
 				{{- end }}
 			</footer>
 		</article>
+		{{- if .Params.toc }}
+		<aside id="toc">
+			<div class="toc-title">Table of Contents</div>
+			{{ .TableOfContents }}
+		</aside>
+		{{- end }}
 		<div class="post-nav thin">
 			{{- with .NextInSection }}
 			<a class="next-post" href="{{ .Permalink }}">
