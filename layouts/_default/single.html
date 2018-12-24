@@ -8,8 +8,10 @@
 		<div class="content">
 			{{ .Content }}
 		</div>
-		{{- with .Params.comments }}
-		{{ with .Site.DisqusShortname }}{{ partialCached "disqus.html" . }}{{ end }}
+		{{- if and .Params.comments .Site.DisqusShortname }}
+		<div id="disqus" class="thin">
+			{{ template "_internal/disqus.html" . }}
+		</div>
 		{{- end }}
 	</main>
 {{ end }}
