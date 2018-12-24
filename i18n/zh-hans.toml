@@ -17,6 +17,9 @@ other = "归档"
 [wordCount]
 other = "{{ .WordCount }} 字"
 
+[tableOfContents]
+other = "目录"
+
 [newer]
 other = "新"
 

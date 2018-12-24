@@ -17,6 +17,9 @@ other = "Archives"
 [wordCount]
 other = "{{ .WordCount }} Words"
 
+[tableOfContents]
+other = "Table of Contents"
+
 [newer]
 other = "Newer"
 
