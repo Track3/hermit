@@ -16,13 +16,13 @@
 	<meta property="og:description" content="{{.Description}}">
 	<meta name="twitter:description" content="{{.Description}}">
 	{{ end }}
-	{{if isset .Params "image"}}
+	{{ if isset .Params "image"}}
 	<meta property="og:image" content="{{.Site.BaseURL}}{{.Params.Image}}">
 	<meta property="twitter:image" content="{{.Site.BaseURL}}{{.Params.Image}}">
 	<meta name="twitter:card" content="summary_large_image">
-	{{else}}
+	{{ else }}
 	<meta name="twitter:card" content="summary">
-	{{end}}
+	{{ end }}
 	<meta name="author" content="{{.Site.Author.name}}">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
