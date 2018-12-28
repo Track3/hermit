@@ -15,7 +15,7 @@
 			{{- end }}
 			<nav id="home-nav" class="site-nav">
 				{{- range .Site.Menus.main }}
-				<a href="{{ .URL }}">{{ .Name }}</a>
+				<a href="{{ .URL | absLangURL }}">{{ .Name }}</a>
 				{{- end }}
 			</nav>
 		</div>

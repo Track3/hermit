@@ -6,7 +6,7 @@
 				</div>
 				<nav class="site-nav hide-in-mobile">
 					{{- range .Site.Menus.main }}
-					<a href="{{ .URL }}">{{ .Name }}</a>
+					<a href="{{ .URL | absLangURL}}">{{ .Name }}</a>
 					{{- end }}
 				</nav>
 			</div>
@@ -24,7 +24,7 @@
 	<div id="mobile-menu" class="animated fast" style="display: none;">
 		<ul>
 			{{- range .Site.Menus.main }}
-			<li><a href="{{ .URL }}">{{ .Name }}</a></li>
+			<li><a href="{{ .URL | absLangURL }}">{{ .Name }}</a></li>
 			{{- end }}
 		</ul>
 	</div>
