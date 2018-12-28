@@ -5,19 +5,19 @@
 	<meta charset="UTF-8">
 	{{ if eq .URL "/posts/" }}
 	<meta name="description" content="{{$.Site.Params.homeSubtitle}}" />
-	<meta name="keywords" content="{{ $.Site.Params.baseKeywords }}">
+	<meta name="keywords" content="{{$.Site.Params.baseKeywords }}">
 	<meta property="og:type" content="website">
 	<meta property="og:description" content="{{.Site.Params.homeSubtitle}}">
 	<meta name="twitter:description" content="{{ .Site.Params.homeSubtitle }}">
 	{{ else if .IsHome }}
 	<meta name="description" content="{{$.Site.Params.homeSubtitle}}" />
-	<meta name="keywords" content="{{ $.Site.Params.baseKeywords }}">
+	<meta name="keywords" content="{{$.Site.Params.baseKeywords }}">
 	<meta property="og:type" content="website">
 	<meta property="og:description" content="{{.Site.Params.homeSubtitle}}">
 	<meta name="twitter:description" content="{{ .Site.Params.homeSubtitle }}">
 	{{ else }}
-	<meta name="description" content="" />
-	<meta name="keywords" content="{{ .Keywords}}">
+	<meta name="description" content="{{.Description}}" />
+	<meta name="keywords" content="{{.Keywords}}">
 	<meta property="og:type" content="article">
 	<meta property="og:description" content="{{.Description}}">
 	<meta name="twitter:description" content="{{.Description}}">
