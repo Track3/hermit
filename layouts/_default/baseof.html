@@ -3,41 +3,9 @@
 
 <head>
 	<meta charset="UTF-8">
-	{{ if or ( eq .URL "/posts/") (.IsHome) }}
-	<meta name="description" content="{{$.Site.Params.homeSubtitle}}" />
-	<meta name="keywords" content="{{ $.Site.Params.baseKeywords }}">
-	<meta property="og:type" content="website">
-	<meta property="og:description" content="{{.Site.Params.homeSubtitle}}">
-	<meta name="twitter:description" content="{{ .Site.Params.homeSubtitle }}">
-	{{ else }}
-	<meta name="description" content="{{.Description}}" />
-	<meta name="keywords" content="{{.Keywords}}">
-	<meta property="og:type" content="article">
-	<meta property="og:description" content="{{.Description}}">
-	<meta name="twitter:description" content="{{.Description}}">
-	{{ end }}
-	{{ if isset .Params "image"}}
-	<meta property="og:image" content="{{.Site.BaseURL}}{{.Params.Image}}">
-	<meta property="twitter:image" content="{{.Site.BaseURL}}{{.Params.Image}}">
-	<meta name="twitter:card" content="summary_large_image">
-	{{ else }}
-	<meta name="twitter:card" content="summary">
-	{{ end }}
-	<meta name="author" content="{{.Site.Author.name}}">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	{{- with .Site.Params.themeColor }}
-	<meta name="theme-color" content="{{.}}">
-	<meta name="msapplication-TileColor" content="{{.}}">
-	{{- end }}
-  <meta property="og:site_name" content="{{.Title}}">
-  <meta property="og:title" content="{{.Title}}">
-  <meta property="og:url" content="{{.Permalink}}">
-  <meta name="twitter:title" content="{{.Title}}">
-  <meta name="twitter:url" content="{{.Permalink}}">
-  <meta name="twitter:label1" content="Written by">
-  <meta name="twitter:data1" content="{{.Site.Author.name}}">
-	<meta name="twitter:site" content="{{.Site.Params.twitter}}">
+	{{ template "_internal/schema.html" . -}}
+	{{ template "_internal/opengraph.html" . -}}
+	{{ template "_internal/twitter_cards.html" . -}}
 	<link rel="apple-touch-icon" sizes="180x180" href="{{"apple-touch-icon.png" | relURL}}">
 	<link rel="icon" type="image/png" sizes="32x32" href="{{"favicon-32x32.png" | relURL}}">
 	<link rel="icon" type="image/png" sizes="16x16" href="{{"favicon-16x16.png" | relURL}}">
