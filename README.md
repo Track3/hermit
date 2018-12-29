@@ -72,7 +72,7 @@ The following icons are supported, please make sure the `name` filed is exactly 
 
 * Keep your regular pages in the `content` folder. To create a new page, run `hugo new page-title.md`
 * Keep your blog posts in the `content/posts` folder. To create a new post, run `hugo new posts/post-title.md`
-* If you want to use comment system other than **Disqus**, then in `config.toml` create a entry `externalComment = true`. And inside your layout directory, create a folder named `partials/` and inside it create a new file named `comments.html`. Inside that comments.html, you can implement your external comment system(like *staticman*, *utteranc.es* etc).
+* If you want to use comment system other than **Disqus**, then in `config.toml` create a entry `externalComment = true`. And inside your `layout` directory, create a folder named `partials` and inside it create a new file named `comments.html`. Inside that comments.html, you can implement your external comment system(like *staticman*, *utteranc.es* etc).
 
 ## Acknowledgments
 

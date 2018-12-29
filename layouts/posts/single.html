@@ -55,7 +55,7 @@
 			{{ template "_internal/disqus.html" . }}
 		</div>
 		{{- else if .Site.Params.ExternalComment }}
-		    {{ partial "external/comments.html" . }}
+		    {{ partial "comments.html" . }}
 		{{- end }}
 	</main>
 {{ end }}
