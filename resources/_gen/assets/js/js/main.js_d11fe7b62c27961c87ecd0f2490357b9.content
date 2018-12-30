@@ -5,4 +5,4 @@ mobileMenuVisible=false;}}
 const showFeaturedImg=()=>{document.getElementById('bg-img').classList.add('show-bg-img');}
 const showContent=()=>{document.getElementById('bg-img').classList.remove('show-bg-img');}
 const toggleToc=()=>{document.getElementById('toc').classList.toggle('show-toc');}
-if(haveHeader==true){document.getElementById('menu-btn').addEventListener('click',mobileMenuToggle);window.addEventListener('scroll',throttle(()=>{autoHideHeader();if(mobileMenuVisible==true){mobileMenuToggle();}},250));}
+if(document.getElementById('site-header')!==null){document.getElementById('menu-btn').addEventListener('click',mobileMenuToggle);window.addEventListener('scroll',throttle(()=>{autoHideHeader();if(mobileMenuVisible==true){mobileMenuToggle();}},250));}

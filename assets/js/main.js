@@ -71,7 +71,7 @@ const toggleToc = () => {
   document.getElementById('toc').classList.toggle('show-toc');
 }
 
-if (haveHeader == true) {
+if (document.getElementById('site-header') !== null) {
   document.getElementById('menu-btn').addEventListener('click', mobileMenuToggle);
 
   window.addEventListener('scroll', throttle(() => {
