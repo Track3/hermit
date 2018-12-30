@@ -68,16 +68,33 @@ The following icons are supported, please make sure the `name` filed is exactly 
 * youtube
 * email
 
+If that's not enough, you can see [Overriding templates](#overriding-templates) section.
+
 ### Manage content
 
 * Keep your regular pages in the `content` folder. To create a new page, run `hugo new page-title.md`
 * Keep your blog posts in the `content/posts` folder. To create a new post, run `hugo new posts/post-title.md`
 
-### Add custom css
+### More customizations
+
+#### Overriding templates
+
+In Hugo, layouts can live in either the project’s (root) or the themes’ layout folders, any template inside the root layout folder will override theme's layout that relative to it, for example: `layouts/_default/baseof.html` will override `themes/hermit/layouts/_default/baseof.html`. So, you can easily customize the theme without edit it directly, which makes updating the theme easier. Here's some common customizations:
+
+##### Customize social icons
+
+You can modify or add any svg icons in site's `layouts/partials/svg.html`
+
+##### Customize comment system
+
+We only have built-in support for Disqus at the moment, if that doesn't fit your needs, you can just add html to site's `layouts/partials/comments.html`
+
+#### Add custom css
+
 For adding custom css to the theme, you need to assign an array of references in `config.toml` like following:
 ```
 [params]
-    custom_css = ["css/foo.css", "css/bar.css"]
+  customCSS = ["css/foo.css", "css/bar.css"]
 ```
 You can reference as many stylesheets as you want. Their paths need to be relative to the `static` folder.
 
