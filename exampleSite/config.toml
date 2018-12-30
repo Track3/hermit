@@ -35,7 +35,7 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
   # gitUrl = "https://github.com/Someone/SomeRepo/commit/" # Prefix of link to the git commit detail page. GitInfo must be enabled.
   justifyContent = false  # Set "text-align: justify" to .content, requires extended version of Hugo
   # bgImg = ""  #  Homepage background-image URL
-
+  # customCSS = ["css/foo.css", "css/bar.css"]  # add custom css
   # Social Icons
   # Check https://github.com/Track3/hermit#social-icons for more info.
   [[params.social]]

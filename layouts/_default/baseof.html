@@ -25,6 +25,9 @@
 	{{ $style := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "css/style.css" . | toCSS | minify | fingerprint -}}
 	<link rel="stylesheet" href="{{ $style.Permalink }}" {{ printf "integrity=%q" $style.Data.Integrity | safeHTMLAttr }}>
 	{{ block "head" . -}}{{- end }}
+	{{ range .Site.Params.CustomCSS -}}
+		<link rel="stylesheet" href="{{ . | absURL }}">
+	{{- end }}
 </head>
 
 <body id="page">

@@ -73,6 +73,14 @@ The following icons are supported, please make sure the `name` filed is exactly 
 * Keep your regular pages in the `content` folder. To create a new page, run `hugo new page-title.md`
 * Keep your blog posts in the `content/posts` folder. To create a new post, run `hugo new posts/post-title.md`
 
+### Add custom css
+For adding custom css to the theme, you need to assign an array of references in `config.toml` like following:
+```
+[params]
+    custom_css = ["css/foo.css", "css/bar.css"]
+```
+You can reference as many stylesheets as you want. Their paths need to be relative to the `static` folder.
+
 ## Acknowledgments
 
 * [normalize.css](https://necolas.github.io/normalize.css/) - [MIT](https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
