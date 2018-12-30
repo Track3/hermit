@@ -27,7 +27,7 @@
 	{{ block "head" . -}}{{- end }}
 	{{ range .Site.Params.CustomCSS -}}
 		<link rel="stylesheet" href="{{ . | absURL }}">
-    {{- end }}
+	{{- end }}
 </head>
 
 <body id="page">
