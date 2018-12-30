@@ -50,11 +50,9 @@
 			</a>
 			{{- end }}
 		</div>
-		{{- if .Site.DisqusShortname }}
-		<div id="disqus" class="thin">
-			{{ template "_internal/disqus.html" . }}
+		<div id="comments" class="thin">
+			{{ partial "comments.html" . }}
 		</div>
-		{{- end }}
 	</main>
 {{ end }}
 

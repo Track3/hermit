@@ -8,9 +8,9 @@
 		<div class="content">
 			{{ .Content }}
 		</div>
-		{{- if and .Params.comments .Site.DisqusShortname }}
-		<div id="disqus" class="thin">
-			{{ template "_internal/disqus.html" . }}
+		{{- if .Params.comments }}
+		<div id="comments" class="thin">
+			{{ partial "comments.html" . }}
 		</div>
 		{{- end }}
 	</main>
