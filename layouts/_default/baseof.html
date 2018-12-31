@@ -28,6 +28,9 @@
 	{{ range .Site.Params.CustomCSS -}}
 		<link rel="stylesheet" href="{{ . | absURL }}">
 	{{- end }}
+	{{ if templates.Exists "partials/extra-headers.html" -}}
+		{{ partial "extra-headers.html" . }}
+	{{- end }}
 </head>
 
 <body id="page">
@@ -36,7 +39,7 @@
 	{{ block "footer" . -}}{{ end }}
 	{{ $script := resources.Get "js/main.js" | minify | fingerprint -}}
 	<script src="{{ $script.Permalink }}" {{ printf "integrity=%q" $script.Data.Integrity | safeHTMLAttr }}></script>
-	{{ template "_internal/google_analytics_async.html" . }}
+	{{ partial "analytics.html" }}
 </body>
 
 </html>
