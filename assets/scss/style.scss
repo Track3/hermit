@@ -252,6 +252,7 @@ table {
   position: fixed;
   bottom: 4.8em;
   right: 1.5em;
+  display: none;
   padding: .6em 1.8em;
   z-index: 1;
   box-sizing: border-box;
@@ -398,7 +399,6 @@ p.img-404 {
   }
 }
 
-
 // list.html
 //
 .posts-group {
@@ -418,7 +418,6 @@ p.img-404 {
     margin: 0;
     padding: 0;
     list-style: none;
-
   }
 
   .post-item {
@@ -442,12 +441,13 @@ p.img-404 {
 // single.html
 //
 .bg-img {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   opacity: .03;
   z-index: -1;
   position: fixed;
   top: 0;
+  cursor: pointer;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -575,8 +575,8 @@ hr.post-end {
     margin: .8em 0;
   }
 
-  a {
-    text-decoration: underline;
+  a:hover {
+    border-bottom: 1px solid $theme;
   }
 
   svg {
