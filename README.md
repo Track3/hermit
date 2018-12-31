@@ -82,15 +82,10 @@ If that's not enough, you can see [Overriding templates](#overriding-templates) 
 In Hugo, layouts can live in either the project’s (root) or the themes’ layout folders, any template inside the root layout folder will override theme's layout that relative to it, for example: `layouts/_default/baseof.html` will override `themes/hermit/layouts/_default/baseof.html`. So, you can easily customize the theme without edit it directly, which makes updating the theme easier. Here's some common customizations:
 
 ##### Customize social icons
-
-You can modify or add any svg icons in site's `layouts/partials/svg.html`
+You can modify or add any svg icons in site's `layouts/partials/svg.html`.
 
 ##### Customize comment system
-
-We only have built-in support for Disqus at the moment, if that doesn't fit your needs, you can just add html to site's `layouts/partials/comments.html`
-
-##### Add extra header
-If you want to load something(like *custom javascript*, *google fonts* etc.) in every page with header, then you can add them inside site's `layouts/partials/extra-headers.html`.
+We only have built-in support for Disqus at the moment, if that doesn't fit your needs, you can just add html to site's `layouts/partials/comments.html`.
 
 ##### Add custom analytics
 If you prefer to use different analytics system other than google analytics, then add them inside `layouts/partials/analytics.html`.
@@ -102,7 +97,11 @@ For adding custom css to the theme, you need to assign an array of references in
 [params]
   customCSS = ["css/foo.css", "css/bar.css"]
 ```
-You can reference as many stylesheets as you want. Their paths need to be relative to the `static` folder.
+You can reference as many stylesheets as you want. Their paths need to be relative to the `static` folder or they can be network resources.
+
+#### Code injection
+
+You can inject any html code to every page's document head or right above the closing body tag. This makes it easier to add any html meta data, custom css/js, dns-prefetch etc. To do this you simplely need to creat a file at site's `layouts/partials/extra-head.html` or `layouts/partials/extra-foot.html`, code inside will be injected to every page.
 
 ## Acknowledgments
 
