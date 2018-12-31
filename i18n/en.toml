@@ -25,3 +25,11 @@ other = "Newer"
 
 [older]
 other = "Older"
+
+# partials/header.html
+#
+[menu]
+other = "Menu"
+
+[featuredImage]
+other = "Featured Image"

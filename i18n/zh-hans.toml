@@ -25,3 +25,11 @@ other = "新"
 
 [older]
 other = "旧"
+
+# partials/header.html
+#
+[menu]
+other = "菜单"
+
+[featuredImage]
+other = "特色图片"
