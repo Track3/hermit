@@ -1,6 +1,10 @@
 {{ define "main" }}
-	{{- with .Site.Params.bgImg }}
-	<div class="bg-img" style="background-image: url('{{ . }}')"></div>
+	{{- if .Site.Params.bgImg }}
+	<div class="bg-img" style="background-image: url({{.Site.Params.bgImg}});"></div>
+	{{- else if .Site.Params.images }}
+	{{- range first 1 .Site.Params.images }}
+	<div class="bg-img" style="background-image: url({{.}});"></div>
+	{{- end }}
 	{{- end }}
 	<div id="spotlight" class="animated fadeIn">
 		<div id="home-center">

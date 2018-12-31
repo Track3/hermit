@@ -3,8 +3,12 @@
 {{ end }}
 
 {{ define "main" }}
-	{{- with .Params.featuredImg }}
+	{{- if .Params.featuredImg }}
+	<div id="bg-img" class="bg-img" style="background-image: url({{.Params.featuredImg}});" onclick="showContent()"></div>
+	{{- else if .Params.images }}
+	{{- range first 1 .Params.images }}
 	<div id="bg-img" class="bg-img" style="background-image: url({{.}});" onclick="showContent()"></div>
+	{{- end }}
 	{{- end }}
 	<main class="site-main section-inner animated fadeIn faster">
 		<article class="thin">
@@ -51,7 +55,7 @@
 			{{- end }}
 		</div>
 		<div id="comments" class="thin">
-			{{ partial "comments.html" . }}
+		{{- partial "comments.html" . -}}
 		</div>
 	</main>
 {{ end }}
