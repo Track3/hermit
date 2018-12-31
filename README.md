@@ -89,6 +89,12 @@ You can modify or add any svg icons in site's `layouts/partials/svg.html`
 
 We only have built-in support for Disqus at the moment, if that doesn't fit your needs, you can just add html to site's `layouts/partials/comments.html`
 
+##### Add extra header
+If you want to load something(like *custom javascript*, *google fonts* etc.) in every page with header, then you can add them inside site's `layouts/partials/extra-headers.html`.
+
+##### Add custom analytics
+If you prefer to use different analytics system other than google analytics, then add them inside `layouts/partials/analytics.html`.
+
 #### Add custom css
 
 For adding custom css to the theme, you need to assign an array of references in `config.toml` like following:
