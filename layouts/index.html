@@ -1,10 +1,20 @@
+{{ define "head" }}
+	<style>
+	.bg-img {background-image: url('
+	{{- if .Site.Params.bgImg -}}
+		{{.Site.Params.bgImg | absURL}}
+	{{- else if .Site.Params.images -}}
+		{{- range first 1 .Site.Params.images -}}
+		{{. | absURL}}
+		{{- end -}}
+	{{- end -}}
+	');}
+	</style>
+{{ end }}
+
 {{ define "main" }}
-	{{- if .Site.Params.bgImg }}
-	<div class="bg-img" style="background-image: url({{.Site.Params.bgImg}});"></div>
-	{{- else if .Site.Params.images }}
-	{{- range first 1 .Site.Params.images }}
-	<div class="bg-img" style="background-image: url({{.}});"></div>
-	{{- end }}
+	{{- if (or .Site.Params.images .Site.Params.bgImg) }}
+	<div class="bg-img"></div>
 	{{- end }}
 	<div id="spotlight" class="animated fadeIn">
 		<div id="home-center">
