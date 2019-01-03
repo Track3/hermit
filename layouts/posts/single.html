@@ -1,15 +1,11 @@
 {{ define "head" }}
-	<style>
-	.bg-img {background-image: url('
-	{{- if .Params.featuredImg -}}
-		{{.Params.featuredImg | absURL}}
+	{{ if .Params.featuredImg -}}
+	<style>.bg-img {background-image: url('{{.Params.featuredImg | absURL}}');}</style>
 	{{- else if .Params.images -}}
 		{{- range first 1 .Params.images -}}
-		{{. | absURL}}
+		<style>.bg-img {background-image: url('{{. | absURL}}');}</style>
 		{{- end -}}
 	{{- end -}}
-	');}
-	</style>
 {{ end }}
 
 {{ define "header" }}

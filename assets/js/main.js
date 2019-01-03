@@ -65,8 +65,12 @@ const toggleMobileMenu = () => {
 
 // Featured Image Toggle
 //
-const toggleImg = () => {
-  document.querySelector('.bg-img').classList.toggle('show-bg-img');
+const showImg = () => {
+  document.querySelector('.bg-img').classList.add('show-bg-img');
+}
+
+const hideImg = () => {
+  document.querySelector('.bg-img').classList.remove('show-bg-img');
 }
 
 // ToC Toggle
@@ -79,8 +83,8 @@ const toggleToc = () => {
 if (header !== null) {
   listen('#menu-btn', "click", toggleMobileMenu);
   listen('#toc-btn', "click", toggleToc);
-  listen('#img-btn', "click", toggleImg);
-  listen('.bg-img', "click", toggleImg);
+  listen('#img-btn', "click", showImg);
+  listen('.bg-img', "click", hideImg);
 
   window.addEventListener('scroll', throttle(() => {
     autoHideHeader();

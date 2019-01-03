@@ -447,7 +447,6 @@ p.img-404 {
   z-index: -1;
   position: fixed;
   top: 0;
-  cursor: pointer;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -458,6 +457,7 @@ p.img-404 {
 .show-bg-img {
   z-index: 100;
   opacity: 1;
+  cursor: pointer;
 }
 
 .post-header {
