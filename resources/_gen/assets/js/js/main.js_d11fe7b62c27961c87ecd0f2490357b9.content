@@ -6,4 +6,4 @@ mobileMenuVisible=false;}}
 const showImg=()=>{document.querySelector('.bg-img').classList.add('show-bg-img');}
 const hideImg=()=>{document.querySelector('.bg-img').classList.remove('show-bg-img');}
 const toggleToc=()=>{document.getElementById('toc').classList.toggle('show-toc');}
-if(header!==null){listen('#menu-btn',"click",toggleMobileMenu);listen('#toc-btn',"click",toggleToc);listen('#img-btn',"click",showImg);listen('.bg-img',"click",hideImg);window.addEventListener('scroll',throttle(()=>{autoHideHeader();if(mobileMenuVisible==true){mobileMenuToggle();}},250));}
+if(header!==null){listen('#menu-btn',"click",toggleMobileMenu);listen('#toc-btn',"click",toggleToc);listen('#img-btn',"click",showImg);listen('.bg-img',"click",hideImg);window.addEventListener('scroll',throttle(()=>{autoHideHeader();if(mobileMenuVisible==true){toggleMobileMenu();}},250));}

@@ -90,7 +90,7 @@ if (header !== null) {
     autoHideHeader();
 
     if (mobileMenuVisible == true) {
-      mobileMenuToggle();
+      toggleMobileMenu();
     }
   }, 250));
 }
