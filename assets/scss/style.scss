@@ -534,6 +534,33 @@ hr.post-end {
     padding: 0;
     margin-left: 1.8em;
   }
+
+  a.anchor {
+    float: left;
+    margin-left: -20px;
+    box-shadow: none;
+    opacity: .8;
+    &:hover {
+      background: none;
+      color: $theme;
+      opacity: 1;
+    }
+    svg {
+      width: 14px;
+      height: 14px;
+      vertical-align: baseline;
+      visibility: hidden;
+    }
+  }
+
+  h1:hover a.anchor svg,
+  h2:hover a.anchor svg,
+  h3:hover a.anchor svg,
+  h4:hover a.anchor svg,
+  h5:hover a.anchor svg,
+  h6:hover a.anchor svg {
+    visibility: visible;
+  }
 }
 
 .footnotes {
