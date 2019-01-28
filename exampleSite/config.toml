@@ -36,6 +36,24 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
   # images = [""]
   themeColor = "#494f5c"
 
+[params.publisher]
+    name = "Hermit"
+
+    [params.publisher.logo]
+      url = "/img/logo.png"
+      width = 192
+      height = 192
+
+  [params.logo]
+    url = "/img/logo.png"
+    width = 192
+    height = 192
+
+  [params.image]
+    url = "/img/cover.png"
+    width = 800
+    height = 600
+
   homeSubtitle = "A minimal and fast theme for Hugo."
   footerCopyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
   # bgImg = ""  # Homepage background-image URL
