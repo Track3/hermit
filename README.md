@@ -64,6 +64,7 @@ The following icons are supported, please make sure the `name` filed is exactly 
 * instagram
 * linkedin
 * slack
+* telegram
 * twitter
 * youtube
 * email
