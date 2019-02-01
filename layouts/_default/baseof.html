@@ -9,9 +9,7 @@
 	<meta name="theme-color" content="{{.}}">
 	<meta name="msapplication-TileColor" content="{{.}}">
 	{{- end }}
-	{{- template "_internal/schema.html" . }}
-	{{- template "_internal/opengraph.html" . }}
-	{{- template "_internal/twitter_cards.html" . }}
+	{{- partial "structured-data.html" . }}
 	{{- partial "favicons.html" }}
 	<title>{{.Title}}</title>
 	{{ range .AlternativeOutputFormats -}}
