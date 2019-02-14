@@ -20,7 +20,7 @@ $code-fonts: Consolas, "Andale Mono WT", "Andale Mono", Menlo, Monaco, "Lucida C
 
 @mixin aTag {
   a {
-    word-break: break-all;
+    word-wrap: break-word;
     border: none;
     box-shadow: inset 0 -4px 0 $theme;
     transition-property: background-color;
