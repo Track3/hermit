@@ -1,5 +1,7 @@
 # Hugo theme Hermit
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/01a2e2de-d57d-4d89-8322-95685000e60f/deploy-status)](https://app.netlify.com/sites/hugo-theme-hermit/deploys)
+
 Hermit is a minimal and fast theme for Hugo. It's built for bloggers who want a simple and focused website.
 
 ![](https://github.com/Track3/hermit/raw/master/images/screenshot.png)
@@ -13,13 +15,15 @@ Hermit is a minimal and fast theme for Hugo. It's built for bloggers who want a 
 * Extremely lightweight and load fast. No third party framework, no unnecessary code.
 * Responsive & Retina Ready. Scales gracefully from a big screen all the way down to the smallest mobile phone. Assets in vector format ensures that it looks sharp on high-resolution screens.
 
+**[Theme Demo](https://hugo-theme-hermit.netlify.com/)** (uses contents and config from the `exampleSite` folder)
+
 ![](https://github.com/Track3/hermit/raw/master/images/hermit.png)
 
 ## Getting started
 
 ### Installation
 
-Run this command from the root of your Hugo directory (Git needs to be installed):
+Run this command from the root of your Hugo directory:
 
 ```bash
 $ git clone https://github.com/Track3/hermit.git themes/hermit
