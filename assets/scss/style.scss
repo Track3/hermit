@@ -408,6 +408,11 @@ p.img-404 {
     margin-right: 1.8em;
     font-size: 1.6em;
     @include dimmed;
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
   }
 
   .posts-list {
