@@ -61,17 +61,11 @@ Use [RealFaviconGenerator](https://realfavicongenerator.net/) to generate these 
 
 The following icons are supported, please make sure the `name` filed is exactly one of these:
 
-* codepen
-* facebook
-* github
-* gitlab
-* instagram
-* linkedin
-* slack
-* telegram
-* twitter
-* youtube
-* email
+| name            |             |            |           |
+| --------------- | ----------- | ---------- | --------- |
+| `email`         | `codepen`   | `facebook` | `github`  |
+| `gitlab`        | `instagram` | `linkedin` | `slack`   |
+| `stackoverflow` | `telegram`  | `twitter`  | `youtube` |
 
 If that's not enough, you can see [Overriding templates](#overriding-templates) section.
 
