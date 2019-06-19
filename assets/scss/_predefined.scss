@@ -23,10 +23,11 @@ $code-fonts: Consolas, "Andale Mono WT", "Andale Mono", Menlo, Monaco, "Lucida C
     word-wrap: break-word;
     border: none;
     box-shadow: inset 0 -4px 0 $theme;
-    transition-property: background-color;
+    transition-property: box-shadow;
+    transition-duration: .1s;
 
     &:hover {
-      background-color: $theme;
+      box-shadow: inset 0 -1em 0 $theme;
     }
   }
 }
