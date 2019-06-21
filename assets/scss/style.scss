@@ -687,6 +687,25 @@ hr.post-end {
   }
 }
 
+.related-posts {
+  padding: .8em;
+  margin-top: 1.5em;
+  font-size: .8rem;
+  border: 3px dashed rgba(255, 255, 255, .2);
+  border-radius: 5px;
+
+  h2{
+    margin: 0;
+    line-height: normal;
+  }
+
+  ul {
+    margin-top: .5em;
+    margin-bottom: 0;
+  }
+}
+
+
 // Media Queries
 //
 @media (min-width: 800px) {
