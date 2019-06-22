@@ -145,6 +145,10 @@ table {
   height: 1em;
 }
 
+.sub-menu {
+  font-size: .7em;
+}
+
 .desktop-only, .desktop-only-ib {
   display: none;
 }
@@ -214,6 +218,15 @@ table {
     display: inline-block;
     font-size: 1.1em;
     opacity: .8;
+
+    .has-children {
+      padding-right: .5em;
+      border-right: 2px solid $highlight-grey;
+    }
+
+    .sub-menu > a{
+      margin-left: .3em;
+    }
 
     a {
       margin-left: .8em;
