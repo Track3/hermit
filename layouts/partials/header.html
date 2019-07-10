@@ -5,9 +5,7 @@
 					<a href="{{.Site.BaseURL}}">{{ .Site.Title }}</a>
 				</div>
 				<nav class="site-nav hide-in-mobile">
-					{{- range .Site.Menus.main }}
-					<a href="{{ .URL | absLangURL}}">{{ .Name }}</a>
-					{{- end }}
+					{{ partialCached "menu.html" . }}
 				</nav>
 			</div>
 			<div class="hdr-right hdr-icons">

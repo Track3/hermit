@@ -34,7 +34,7 @@ let header = document.getElementById('site-header');
 let lastScrollPosition = window.pageYOffset;
 
 const autoHideHeader = () => {
-  let currentScrollPosition = window.pageYOffset;
+  let currentScrollPosition = Math.max(window.pageYOffset, 0);
   if (currentScrollPosition > lastScrollPosition) {
     header.classList.remove('slideInUp');
     header.classList.add('slideOutDown');

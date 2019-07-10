@@ -46,6 +46,8 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
   # Toggling this option needs to rebuild SCSS, requires Hugo extended version
   justifyContent = false  # Set "text-align: justify" to `.content`.
 
+  relatedPosts = false  # Add a related content section to all single posts page
+
   # Add custom css
   # customCSS = ["css/foo.css", "css/bar.css"]
 

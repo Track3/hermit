@@ -24,9 +24,7 @@
 			</div>
 			{{- end }}
 			<nav id="home-nav" class="site-nav">
-				{{- range .Site.Menus.main }}
-				<a href="{{ .URL | absLangURL }}">{{ .Name }}</a>
-				{{- end }}
+				{{ partialCached "menu.html" . }}
 			</nav>
 		</div>
 		<div id="home-footer">
