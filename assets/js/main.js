@@ -76,7 +76,11 @@ const hideImg = () => {
 // ToC Toggle
 //
 const toggleToc = () => {
-  document.getElementById('toc').classList.toggle('show-toc');
+  if(document.getElementById('toc').style.display == 'inline-block'){
+    document.getElementById('toc').style.display = 'none';  // classList.toggle('show-toc');
+  } else {
+    document.getElementById('toc').style.display = 'inline-block';
+  }
 }
 
 

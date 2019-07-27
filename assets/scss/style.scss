@@ -3,6 +3,7 @@
 @import "syntax.scss";
 @import "animate.scss";
 
+
 /* Webkit Scrollbar Customize */
 ::-webkit-scrollbar {
   width: 8px;
@@ -641,11 +642,17 @@ hr.post-end {
   }
 }
 
+#toc-btn {
+  display: inline-block;
+}
+
 #toc {
-  position: fixed;
-  left: 50%;
+  position: absolute;
+  right: 1%;
+  // left: 50%;
   top: 0;
   display: none;
+  background: #494f5c;
 }
 
 .toc-title {
@@ -743,9 +750,9 @@ hr.post-end {
   }
 
   .desktop-only,
-  #toc.show-toc {
-    display: block;
-  }
+  // #toc.show-toc {
+  //    display: block;
+  // }
 
   .desktop-only-ib {
     display: inline-block;
