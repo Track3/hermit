@@ -30,9 +30,15 @@
 	{{ block "header" . -}}{{ end -}}
 	{{ block "main" . -}}{{ end -}}
 	{{ block "footer" . -}}{{ end }}
-	{{ $script := resources.Get "js/main.js" | minify | fingerprint -}}
-    {{ $script := resources.Get "js/code-copy.js" | minify | fingerprint -}}
+    {{ $main := resources.Get "js/main.js" -}}
+    {{ if .Site.Params.code_copy_button | default true}}
+	{{ $codeCopy := resources.Get "js/code-copy.js" -}}
+	{{ $script := slice $main $codeCopy | resources.Concat "js/bundle.js" | minify | fingerprint -}}
+    <script src="{{ $script.Permalink }}" {{ printf "integrity=%q" $script.Data.Integrity | safeHTMLAttr }}></script>
+    {{ else }}
+    {{ $script := $main | minify | fingerprint -}}
 	<script src="{{ $script.Permalink }}" {{ printf "integrity=%q" $script.Data.Integrity | safeHTMLAttr }}></script>
+    {{ end }}
 	{{- partial "analytics.html" . }}
 	{{- if templates.Exists "partials/extra-foot.html" -}}
 	{{ partial "extra-foot.html" . }}
