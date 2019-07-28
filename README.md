@@ -67,7 +67,7 @@ The following icons are supported, please make sure the `name` filed is exactly 
 | `gitlab`        | `instagram` | `linkedin`   | `slack`   |
 | `stackoverflow` | `telegram`  | `twitter`    | `youtube` |
 | `shutterstock`  | `freepik`   | `adobestock` | `123rf`   |
-| `dreamstime"`   | `dribbble`  | `behance`    | `paypal`  |
+| `dreamstime`    | `dribbble`  | `behance`    | `paypal`  |
 
 If that's not enough, you can see [Overriding templates](#overriding-templates) section.
 
