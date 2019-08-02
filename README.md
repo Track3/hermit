@@ -13,6 +13,7 @@ Hermit is a minimal and fast theme for Hugo. It's built for bloggers who want a 
 * Featured image is supported. It will be displayed as a dimmed background of the page.
 * Displays all of your posts on a single page, with one section per year, simple and compact.
 * Extremely lightweight and load fast. No third party framework, no unnecessary code.
+* All code fields feature syntax highlighting and a code-copy function
 * Responsive & Retina Ready. Scales gracefully from a big screen all the way down to the smallest mobile phone. Assets in vector format ensures that it looks sharp on high-resolution screens.
 
 **[Theme Demo](https://hugo-theme-hermit.netlify.com/)** (uses contents and config from the `exampleSite` folder)
@@ -111,5 +112,6 @@ You can inject any html code to every page's document head or right above the cl
 * [normalize.css](https://necolas.github.io/normalize.css/) - [MIT](https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
 * [animate.css](https://daneden.github.io/animate.css/) - [MIT](https://github.com/daneden/animate.css/blob/master/LICENSE)
 * [feather](https://feathericons.com/) - [MIT](https://github.com/feathericons/feather/blob/master/LICENSE)
+* [code-copy.js](assets/js/code-copy.js) - [Tom Spencer](https://www.fiznool.com/blog/2018/09/14/adding-click-to-copy-buttons-to-a-hugo-powered-blog/)
 
 Thanks!
