@@ -17,6 +17,7 @@
 	<div class="bg-img"></div>
 	{{- end }}
 	<main class="site-main section-inner animated fadeIn faster">
+      <div id='article'>
 		<article class="thin">
 			<header class="post-header">
 				<div class="post-meta"><span>{{ .Date.Format .Site.Params.dateform }}</span></div>
@@ -45,12 +46,6 @@
 				{{- end }}
 			</footer>
 		</article>
-		{{- if .Params.toc }}
-		<aside id="toc">
-			<div class="toc-title">{{ i18n "tableOfContents" }}</div>
-			{{ .TableOfContents }}
-		</aside>
-		{{- end }}
 		<div class="post-nav thin">
 			{{- with .NextInSection }}
 			<a class="next-post" href="{{ .Permalink }}">
@@ -66,6 +61,13 @@
 		<div id="comments" class="thin">
 		{{- partial "comments.html" . -}}
 		</div>
+      </div>
+	{{- if .Params.toc }}
+	    <aside id="toc">
+	    	<div class="toc-title">{{ i18n "tableOfContents" }}</div>
+	    	{{ .TableOfContents }}
+		</aside>
+	{{- end }}
 	</main>
 {{ end }}
 
