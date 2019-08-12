@@ -4,18 +4,18 @@
 
 // Throttle
 //
-const throttle = (callback, limit) => {
-  let timeoutHandler = null;
-  return () => {
-    if (timeoutHandler == null) {
-      timeoutHandler = setTimeout(() => {
-        callback();
-        timeoutHandler = null;
-      }, limit);
-    }
-  };
-};
-
+//const throttle = (callback, limit) => {
+//  let timeoutHandler = null;
+//  return () => {
+//    if (timeoutHandler == null) {
+//      timeoutHandler = setTimeout(() => {
+//        callback();
+//        timeoutHandler = null;
+//      }, limit);
+//    }
+//  };
+//};
+//
 // addEventListener Helper
 //
 const listen = (ele, e, callback) => {
@@ -28,22 +28,30 @@ const listen = (ele, e, callback) => {
  * Functions
  */
 
-// Auto Hide Header
+// Auto Hide Header by rolling up/down
 //
 let header = document.getElementById('site-header');
-let lastScrollPosition = window.pageYOffset;
+// let lastScrollPosition = window.pageYOffset;
 
-const autoHideHeader = () => {
-  let currentScrollPosition = Math.max(window.pageYOffset, 0);
-  if (currentScrollPosition > lastScrollPosition) {
-    header.classList.remove('slideInUp');
-    header.classList.add('slideOutDown');
-  } else {
-    header.classList.remove('slideOutDown');
-    header.classList.add('slideInUp');
-  }
-  lastScrollPosition = currentScrollPosition;
+// const autoHideHeader = () => {
+//  let currentScrollPosition = Math.max(window.pageYOffset, 0);
+//  if (currentScrollPosition > lastScrollPosition) {
+//    header.classList.remove('slideInUp');
+//    header.classList.add('slideOutDown');
+//  } else {
+//    header.classList.remove('slideOutDown');
+//    header.classList.add('slideInUp');
+//  }
+//  lastScrollPosition = currentScrollPosition;
+// }
+
+// Auto Hide Header by click on page
+const toggleHeader = () => {
+    if (mobileMenuVisible == true) return;
+    header.classList.toggle('slideInUp');
+    header.classList.toggle('slideOutDown');
 }
+
 
 // Mobile Menu Toggle
 //
@@ -90,6 +98,8 @@ if (header !== null) {
   listen('#toc-btn', "click", toggleToc);
   listen('#img-btn', "click", showImg);
   listen('.bg-img', "click", hideImg);
+  listen('#page', "click", toggleHeader);
+  listen('#mobile-menu', "click", toggleMobileMenu);
 
   document.querySelectorAll('.post-year').forEach((ele)=> {
     ele.addEventListener('click', () => {
@@ -97,11 +107,11 @@ if (header !== null) {
     });
   });
 
-  window.addEventListener('scroll', throttle(() => {
-    autoHideHeader();
+//  window.addEventListener('scroll', throttle(() => {
+//    autoHideHeader();
 
-    if (mobileMenuVisible == true) {
-      toggleMobileMenu();
-    }
-  }, 250));
+//    if (mobileMenuVisible == true) {
+//      toggleMobileMenu();
+//    }
+//  }, 250));
 }
