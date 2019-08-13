@@ -98,7 +98,7 @@ if (header !== null) {
   listen('#toc-btn', "click", toggleToc);
   listen('#img-btn', "click", showImg);
   listen('.bg-img', "click", hideImg);
-  listen('#page', "click", toggleHeader);
+  listen('main', "click", toggleHeader);
   listen('#mobile-menu', "click", toggleMobileMenu);
 
   document.querySelectorAll('.post-year').forEach((ele)=> {
