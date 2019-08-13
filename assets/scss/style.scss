@@ -284,6 +284,7 @@ table {
 }
 
 #site-footer {
+  display: table;
   text-align: center;
   font-size: .9em;
   margin-bottom: 96px;
@@ -645,7 +646,7 @@ hr.post-end {
 
 .article {
   margin: auto;
-  width: 85%;
+  width: 80%;
   float: left;
 }
 
@@ -660,7 +661,7 @@ hr.post-end {
   display: none;
   background: #494f5c;
   // margin: auto;
-  width: 15%;
+  width: 20%;
   height: 99%;
   overflow-y: auto;
   overflow-x: hidden;
@@ -885,5 +886,11 @@ hr.post-end {
 
   #mobile-menu {
     right: 1.2em;
+  }
+  .article {
+    width: 60%;
+  }
+  #toc {
+    width: 40%;
   }
 }
