@@ -4,7 +4,7 @@ date: {{ .Date }}
 draft: false
 toc: true
 images: 
-  - web.jpeg
+  - https://picsum.photos/1024/768/?random
 math: true
 tags: 
   - untagged
