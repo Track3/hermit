@@ -16,7 +16,7 @@
 		{{ printf `<link rel="%s" type="%s+%s" href="%s" title="%s" />` .Rel .MediaType.Type .MediaType.Suffix .Permalink $.Site.Title | safeHTML }}
 	{{ end -}}
 	{{ $style := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "css/style.css" . | toCSS | minify | fingerprint -}}
-	<link rel="stylesheet" href="{{ $style.Permalink }}" {{ printf "integrity=%q" $style.Data.Integrity | safeHTMLAttr }}>
+	<link rel="stylesheet" href="{{ $style.Permalink }}" {{ printf "integrity=%q" $style.Data.Integrity | safeHTMLAttr }} crossorigin="anonymous">
 	{{- block "head" . -}}{{- end }}
 	{{- range .Site.Params.customCSS }}
 	<link rel="stylesheet" href="{{ . | absURL }}">
@@ -30,15 +30,17 @@
 	{{ block "header" . -}}{{ end -}}
 	{{ block "main" . -}}{{ end -}}
 	{{ block "footer" . -}}{{ end }}
-    {{ $main := resources.Get "js/main.js" -}}
-    {{ if .Site.Params.code_copy_button | default true}}
-	{{ $codeCopy := resources.Get "js/code-copy.js" -}}
-	{{ $script := slice $main $codeCopy | resources.Concat "js/bundle.js" | minify | fingerprint -}}
-    <script src="{{ $script.Permalink }}" {{ printf "integrity=%q" $script.Data.Integrity | safeHTMLAttr }}></script>
-    {{ else }}
-    {{ $script := $main | minify | fingerprint -}}
-	<script src="{{ $script.Permalink }}" {{ printf "integrity=%q" $script.Data.Integrity | safeHTMLAttr }}></script>
-    {{ end }}
+
+	{{ $main := resources.Get "js/main.js" -}}
+	{{ if .Site.Params.code_copy_button | default true -}}
+		{{ $codeCopy := resources.Get "js/code-copy.js" -}}
+		{{ $script := slice $main $codeCopy | resources.Concat "js/bundle.js" | minify | fingerprint -}}
+		<script src="{{ $script.Permalink }}" {{ printf "integrity=%q" $script.Data.Integrity | safeHTMLAttr }} crossorigin="anonymous"></script>
+	{{ else -}}
+		{{ $script := $main | minify | fingerprint -}}
+		<script src="{{ $script.Permalink }}" {{ printf "integrity=%q" $script.Data.Integrity | safeHTMLAttr }} crossorigin="anonymous"></script>
+	{{ end }}
+
 	{{- partial "analytics.html" . }}
 	{{- if templates.Exists "partials/extra-foot.html" -}}
 	{{ partial "extra-foot.html" . }}
