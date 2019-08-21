@@ -82,7 +82,7 @@ blockquote {
     font-style: normal;
 
     &::before {
-      content: "—— ";
+      content: "—�? ";
     }
   }
 }
@@ -462,7 +462,7 @@ p.img-404 {
 .bg-img {
   width: 100vw;
   height: 100vh;
-  opacity: .03;
+  opacity: .07;
   z-index: -1;
   position: fixed;
   top: 0;
