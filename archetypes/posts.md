@@ -1,7 +1,7 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-draft: false
+gototop: true
 toc: true
 images: 
   - https://picsum.photos/1024/768/?random
