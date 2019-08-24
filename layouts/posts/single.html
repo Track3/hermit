@@ -21,6 +21,9 @@
 		<article class="thin">
 			<header class="post-header">
 				<div class="post-meta"><span>{{ .Date.Format .Site.Params.dateform }}</span></div>
+				{{ if .Params.update }}
+				<div class="post-meta"><span>Last updated: {{ .Params.update }}</span></div>
+				{{ end }}
 				<h1>{{ .Title }}</h1>
 			</header>
 			<div class="content">
