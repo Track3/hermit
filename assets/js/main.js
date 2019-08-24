@@ -98,13 +98,21 @@ if (header !== null) {
   listen('#toc-btn', "click", toggleToc);
   listen('#img-btn', "click", showImg);
   listen('.bg-img', "click", hideImg);
-  listen('main', "click", toggleHeader);
+  // listen('main', "click", toggleHeader);
   listen('#mobile-menu', "click", toggleMobileMenu);
 
   document.querySelectorAll('.post-year').forEach((ele)=> {
     ele.addEventListener('click', () => {
       window.location.hash = '#' + ele.id;
     });
+  });
+
+  document.querySelectorAll('main, main :not(a)').forEach((ele)=> {
+    ele.addEventListener('click', function(event){
+      if (event.currentTarget !== event.target)
+        return;
+      toggleHeader();
+    }, false);
   });
 
 //  window.addEventListener('scroll', throttle(() => {
