@@ -62,11 +62,19 @@
 			<a class="next-post" href="{{ .Permalink }}">
 				<span class="post-nav-label"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>&nbsp;{{ i18n "newer" }}</span><br><span>{{ .Title }}</span>
 			</a>
+			{{- else -}}
+			<a class="next-post" href="javascript:void(0)">
+				<span class="post-nav-label"></span><br><span style="color:grey">{{ i18n "newest" }}</span>
+			</a>
 			{{- end }}
 			{{- with .PrevInSection }}
 			<a class="prev-post" href="{{ .Permalink }}">
 				<span class="post-nav-label">{{ i18n "older" }}&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span><br><span>{{ .Title }}</span>
 			</a>
+			{{- else -}}
+			<a class="prev-post" href="javascript:void(0)">
+					<span class="post-nav-label"></span><br><span style="color:grey">{{ i18n "oldest" }}</span>
+				</a>
 			{{- end }}
 		</div>
 		<div id="comments" class="thin">

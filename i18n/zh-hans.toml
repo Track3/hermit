@@ -7,7 +7,7 @@
 other = "糟糕，您要访问的页面不存在……"
 
 [home]
-other = "主页"
+other = "首页"
 
 [archives]
 other = "归档"
@@ -24,10 +24,10 @@ other = "{{ .WordCount }} 字"
 other = "目录"
 
 [newer]
-other = "新"
+other = "下一篇"
 
 [older]
-other = "旧"
+other = "上一篇"
 
 # partials/header.html
 #
@@ -36,3 +36,10 @@ other = "菜单"
 
 [featuredImage]
 other = "特色图片"
+
+
+[newest]
+other = "这已经是第一篇文章"
+
+[oldest]
+other = "这是最后一篇文章"

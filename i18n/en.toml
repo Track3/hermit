@@ -4,7 +4,7 @@
 # 404.html
 #
 [notFound]
-other = "Oops, page not foundâ€¦"
+other = "Oops, page not foundâ€?"
 
 [home]
 other = "Home"
@@ -36,3 +36,10 @@ other = "Menu"
 
 [featuredImage]
 other = "Featured Image"
+
+# layouts/posts/single.html
+[newest]
+other = "No More Newer"
+
+[oldest]
+other = "No More Older"
