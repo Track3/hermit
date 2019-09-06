@@ -1,3 +1,10 @@
 {{- if .Site.DisqusShortname }}
 {{ template "_internal/disqus.html" . }}
 {{- end }}
+
+{{- with .Site.Params.isso }}
+    <script data-isso="//comments.callmsn.top/"
+        src="//comments.callmsn.top/js/embed.min.js"></script>
+    <section id="isso-thread"></section>
+{{- end }}
+
