@@ -110,7 +110,7 @@ hr {
   margin: 1.8em auto;
 }
 
-table {
+table.lntable {
   border-collapse: collapse;
   border-spacing: 0;
   empty-cells: show;
@@ -126,6 +126,40 @@ table {
   th {
     font-weight: 700;
     vertical-align: bottom;
+  }
+}
+
+table:not(.lntable) {
+  // border: 0.5px solid;
+  max-height: 300px;
+  display: inline-block;
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  font-size: 0.8em;
+  line-height: 20px;
+  text-align: center;
+  margin: 10px 0;
+  // border: none;
+  border-collapse: collapse;
+  background: #2c3e50;
+  th {
+  font-weight: bold;
+  padding: 4px;
+  border-bottom: 0px;
+  }
+  thead {
+    border-bottom: 1px solid;
+  }
+  tbody tr:not(:last-child) {
+    border-bottom: 1px dashed;
+  }
+  td {
+  padding: 0 0.8em;
+  border-bottom: 0px;
+  }
+  tr:hover {
+  background: #4B4B4B; 
   }
 }
 
