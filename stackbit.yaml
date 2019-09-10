@@ -30,20 +30,11 @@ models:
         name: theme
         label: Theme name
       - type: boolean
-        name: enableGitInfo
-        label: Enale Git Info
-        default: false
-      - type: boolean
         name: pygmentsCodefences
         label: Pygments Codefences
       - type: boolean
         name: pygmentsUseClasses
         label: Pygments Use Classes
-      - type: boolean
-        name: hasCJKLanguage
-        label: Has CJK Language
-        description: If Chinese/Japanese/Korean is your main content language, enable this to make wordCount works right.
-        default: false
       - type: number
         name: rssLimit
         label: RSS Limit
@@ -133,12 +124,6 @@ models:
             name: code_copy_button
             label: Code Copy Button
             description: Turn on/off the code-copy-button for code-fields
-          - type: enum
-            name: customCSS
-            label: Custom Css
-            options:
-              - "css/foo.css"
-              - "css/bar.css"
           - type: list
             name: social
             label: Social Icons
