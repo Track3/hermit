@@ -20,6 +20,14 @@ Hermit is a minimal and fast theme for Hugo. It's built for bloggers who want a 
 
 ![](https://github.com/Track3/hermit/raw/master/images/hermit.png)
 
+
+## Stackbit Deploy
+
+This theme is ready to import into Stackbit. This theme can be deployed to Netlify and you can connect any headless CMS including Forestry, NetlifyCMS, DatoCMS or Contentful. 
+
+[![Create with Stackbit](https://assets.stackbit.com/badge/create-with-stackbit.svg)](https://app.stackbit.com/create?theme=https://github.com/Track3/hermit)
+
+
 ## Getting started
 
 ### Installation
