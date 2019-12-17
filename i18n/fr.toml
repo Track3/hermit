@@ -1,0 +1,38 @@
+# Translations for French
+# https://gohugo.io/content-management/multilingual/#translation-of-strings
+
+# 404.html
+#
+[notFound]
+other = "Oh non! page non-trouvée…"
+
+[home]
+other = "Accueil"
+
+[archives]
+other = "Archives"
+
+# posts/single.html
+#
+[seeAlso]
+other = "Voir également"
+
+[wordCount]
+other = "{{ .WordCount }} mots"
+
+[tableOfContents]
+other = "Sommaire"
+
+[newer]
+other = "Suivant"
+
+[older]
+other = "Précédent"
+
+# partials/header.html
+#
+[menu]
+other = "Menu"
+
+[featuredImage]
+other = "Image sélectionnée"
