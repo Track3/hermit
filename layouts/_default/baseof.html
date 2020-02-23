@@ -9,6 +9,7 @@
 	<meta name="theme-color" content="{{.}}">
 	<meta name="msapplication-TileColor" content="{{.}}">
 	{{- end }}
+	<meta name="description" content="{{.Description | default .Site.Params.Description}}">
 	{{- partial "structured-data.html" . }}
 	{{- partial "favicons.html" }}
 	<title>{{.Title}}</title>
