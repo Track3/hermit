@@ -78,6 +78,19 @@ If that's not enough, you can see [Overriding templates](#overriding-templates) 
 * Keep your regular pages in the `content` folder. To create a new page, run `hugo new page-title.md`
 * Keep your blog posts in the `content/posts` folder. To create a new post, run `hugo new posts/post-title.md`
 
+### Analytics
+
+While using Google Analytics is implemented in Hugo by default this template also can be used with [Fathom Analytics](https://usefathom.com/).
+
+In your `config.toml` you can specify your _siteID_ and, if you self-hosting, the tracker URL.
+
+```yaml
+[params.fathomAnalytics]
+  siteID = "ABCDE"
+  # Default value is cdn.usefathom.com, overwrite this if you are self-hosting
+  # serverURL = "analytics.example.com"
+```
+
 ### More customizations
 
 #### Overriding templates
