@@ -9,28 +9,11 @@
 	top: 10px;
   }
 
-
-.note {
+.admonition-highlight {
 	border-left-width: 35px;
 	border-left-style: solid;
 	position: relative;
-	border-color: $admonition-note;
-	display: block;
-}
-
-.warning {
-	border-left-width: 35px;
-	border-left-style: solid;
-	position: relative;
-	border-color: $admonition-warning;
-	display: block;
-}
-
-.tip {
-	border-left-width: 35px;
-	border-left-style: solid;
-	position: relative;
-	border-color: $admonition-tip;
+	border-color: $admonition-highlight;
 	display: block;
 }
 
