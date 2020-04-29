@@ -15,6 +15,7 @@ Hermit is a minimal and fast theme for Hugo. It's built for bloggers who want a 
 * Extremely lightweight and load fast. No third party framework, no unnecessary code.
 * All code fields feature syntax highlighting and a code-copy function
 * Responsive & Retina Ready. Scales gracefully from a big screen all the way down to the smallest mobile phone. Assets in vector format ensures that it looks sharp on high-resolution screens.
+* Admonition shortcodes for note, tip and warning to highlight parts of a blog post
 
 **[Theme Demo](https://hugo-theme-hermit.netlify.com/)** (uses contents and config from the `exampleSite` folder)
 
@@ -73,6 +74,18 @@ The following icons are supported, please make sure the `name` filed is exactly 
 
 If that's not enough, you can see [Overriding templates](#overriding-templates) section.
 
+#### Admonition Shortcodes
+
+Shortcodes are available for note, tip and warning.
+
+```md
+{{% note %}}
+This will be shown in a box with note highlight.
+{{% /note %}}
+```
+
+See the [shortcode docs](https://gohugo.io/content-management/shortcodes/) from hugo.
+
 ### Manage content
 
 * Keep your regular pages in the `content` folder. To create a new page, run `hugo new page-title.md`
@@ -85,12 +98,15 @@ If that's not enough, you can see [Overriding templates](#overriding-templates) 
 In Hugo, layouts can live in either the project’s (root) or the themes’ layout folders, any template inside the root layout folder will override theme's layout that relative to it, for example: `layouts/_default/baseof.html` will override `themes/hermit/layouts/_default/baseof.html`. So, you can easily customize the theme without edit it directly, which makes updating the theme easier. Here's some common customizations:
 
 ##### Customize social icons
+
 You can modify or add any svg icons in site's `layouts/partials/svg.html`.
 
 ##### Customize comment system
+
 We only have built-in support for Disqus at the moment, if that doesn't fit your needs, you can just add html to site's `layouts/partials/comments.html`.
 
 ##### Add custom analytics
+
 If you prefer to use different analytics system other than google analytics, then add them inside `layouts/partials/analytics.html`.
 
 #### Customize CSS
