@@ -230,6 +230,7 @@ table {
   box-sizing: border-box;
   box-shadow: -1px -2px 3px rgba(0, 0, 0, 0.45);
   background-color: $dark-grey;
+  animation-duration: .3s;
 }
 
 .hdr-wrapper {
@@ -628,7 +629,7 @@ hr.post-end {
       background: transparent;
     }
 
-    &.footnote-return {
+    &.footnote-backref {
       text-decoration: none;
     }
   }
@@ -638,12 +639,18 @@ hr.post-end {
   }
 }
 
-.footnote-ref a {
+a.footnote-ref {
   box-shadow: none;
   text-decoration: none;
   padding: 2px;
   border-radius: 2px;
   background-color: $midnightblue;
+
+  &:hover{
+    box-shadow: none;
+    background-color: $theme;
+    transition-property: background-color;
+  }
 }
 
 .post-info {
