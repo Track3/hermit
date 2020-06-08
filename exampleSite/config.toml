@@ -13,6 +13,11 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
 # googleAnalytics = "UA-123-45"
 # disqusShortname = "yourdiscussshortname"
 
+[params.fathomAnalytics]
+  # siteID = "ABCDE"
+  # Default value is cdn.usefathom.com, overwrite this if you are self-hosting
+  # serverURL = "analytics.example.com"
+
 [author]
   name = "John Doe"
 
