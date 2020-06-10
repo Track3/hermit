@@ -10,8 +10,8 @@ pygmentsUseClasses  = true
 rssLimit = 10  # Maximum number of items in the RSS feed.
 copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
 enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/functions/emojify/
-# googleAnalytics = "UA-123-45"
-# disqusShortname = "yourdiscussshortname"
+googleAnalytics = ""
+disqusShortname = ""
 
 [author]
   name = "John Doe"
@@ -38,7 +38,7 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
 
   homeSubtitle = "A minimal and fast theme for Hugo."
   footerCopyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
-  # bgImg = ""  # Homepage background-image URL
+  bgImg = ""  # Homepage background-image URL
 
   # Prefix of link to the git commit detail page. GitInfo must be enabled.
   # gitUrl = "https://github.com/username/repository/commit/"

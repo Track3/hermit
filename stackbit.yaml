@@ -1,0 +1,213 @@
+stackbitVersion: ~0.2.0
+ssgName: custom
+publishDir: exampleSite/public
+buildCommand: cd exampleSite && hugo --gc --baseURL "/" --themesDir ../.. && cd ..
+uploadDir: "/"
+staticDir: "static"
+pagesDir: exampleSite/content
+dataDir: exampleSite
+models:
+  config:
+    type: data
+    label: Config
+    file: config.toml
+    fields: 
+      - type: string
+        name: title
+        label: Title
+        required: true
+      - type: string
+        name: baseURL
+        label: Base baseURL
+        description: Hostname (and path)  to the root
+      - type: string
+        name: languageCode
+        label: Language Code "en"
+      - type: string
+        name: defaultContentLanguage
+        label: Default Content Language
+      - type: string
+        name: theme
+        label: Theme name
+      - type: boolean
+        name: pygmentsCodefences
+        label: Pygments Codefences
+      - type: boolean
+        name: pygmentsUseClasses
+        label: Pygments Use Classes
+      - type: number
+        name: rssLimit
+        label: RSS Limit
+        description: Maximum number of items in the RSS feed.
+      - type: string
+        name: copyright
+        label: Copyright
+      - type: boolean
+        name: enableEmoji
+        label: Enable Emoji
+      - type: string
+        name: googleAnalytics
+        label: Google Analytics Code
+      - type: string
+        name: disqusShortname
+        label: Disqus Shortname
+      - type: object
+        name: author
+        label: Author
+        fields:
+          - type: string
+            name: name
+            label: Name
+      - type: object
+        name: blackfriday
+        label: Blackfriday Settings
+        fields: 
+          - type: boolean
+            name: hrefTargetBlank
+            label: HrefTargetBlank
+            description: true  opens absolute links in a new window or tab.
+          - type: boolean
+            name: noreferrerLinks
+            label: HTML Noreferrer Links
+            description: true creates absolute links with noreferrer being added to their rel attribute.
+          - type: boolean
+            name: nofollowLinks
+            label: HTML No Follow Links
+            description: rue creates absolute links with nofollow being added to their rel attribute.
+      - type: object
+        name: taxonomies
+        label: Taxonomies
+        fields:
+          - type: string
+            name: tag
+            label: Tag
+      - type: object
+        name: params
+        label: Site Params
+        fields: 
+          - type: string
+            name: dateform
+            label: Date Format
+          - type: string
+            name: dateformShort
+            label: Short Date Format
+          - type: string
+            name: dateformNum
+            label: Number Style Date Format
+          - type: string
+            name: dateformNumTime
+            label: Number Time Style Date Format
+          - type: string
+            name: themeColor
+            label: Theme Color
+          - type: string
+            name: homeSubtitle
+            label: Home Subtitle
+          - type: string
+            name: footerCopyright
+            label: Footer Copyright
+          - type: string
+            name: target
+            label: Target
+          - type: string
+            name: bgImg
+            label: Background Image
+            description: Homepage background-image
+          - type: boolean
+            name: justifyContent
+            label: Justify Content
+          - type: boolean
+            name: relatedPosts
+            label: Related Posts
+            description: Add a related content section to all single posts page
+          - type: boolean
+            name: code_copy_button
+            label: Code Copy Button
+            description: Turn on/off the code-copy-button for code-fields
+          - type: list
+            name: social
+            label: Social Icons
+            items:
+              type: object
+              fields: 
+                - type: string
+                  name: name
+                  label: Icon Name
+                - type: string
+                  name: url
+                  label: Social Link
+      - type: object
+        name: menu
+        label: Site Menu
+        fields:
+          - type: list
+            name: main
+            label: Main Menu
+            items:
+              type: object
+              fields: 
+                - type: string
+                  name: name
+                  label: Menu Name
+                - type: string
+                  name: url
+                  label: Menu Link
+                - type: number
+                  name: weight
+                  label: Menu Order Weight
+  basicpage:
+    type: page
+    label: Basic Page
+    match: "*.md"
+    fields:
+      - type: string
+        name: title
+        label: Title
+        required: true
+      - type: date
+        name: date
+        label: Creat Date
+  post:
+    type: page
+    label: Blog post
+    folder: posts
+    fields:
+      - type: string
+        name: title
+        label: Title
+        required: true
+      - type: string
+        name: author
+        label: Author
+      - type: date
+        name: date
+        label: Published Date
+      - type: image
+        name: featuredImg
+        label: Featured Image
+      - type: list
+        name: tags
+        label: Tags
+        items:
+          type: string
+      - type: list
+        name: images
+        label: Images
+        items:
+          type: string
+      - type: boolean
+        name: toc
+        label: TOC
+      - type: boolean
+        name: draft
+        label: Draft
+
+
+
+
+
+
+
+
+
+
