@@ -1,0 +1,28 @@
+/*admonition styles */
+
+.admonition-icon {
+	fill: $text;
+	width: 20px;
+	margin: 6px;
+	margin-left: -27px;
+	position: absolute;
+	top: 10px;
+  }
+
+.admonition-highlight {
+	border-left-width: 35px;
+	border-left-style: solid;
+	position: relative;
+	border-color: $admonition-highlight;
+	display: block;
+}
+
+.admonition-content {
+	display: block;
+	margin: 0px;
+	padding: .125em 1em;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	overflow-x: auto;
+	background-color: $highlight-grey;
+}
