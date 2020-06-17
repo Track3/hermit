@@ -1,0 +1,38 @@
+# Translations for Turkish
+# https://gohugo.io/content-management/multilingual/#translation-of-strings
+
+# 404.html
+#
+[notFound]
+other = "Aman, sayfa bulunamadı…"
+
+[home]
+other = "Ana sayfa"
+
+[archives]
+other = "Arşivler"
+
+# posts/single.html
+#
+[seeAlso]
+other = "Ayrıca bkz"
+
+[wordCount]
+other = "{{ .WordCount }} Kelime"
+
+[tableOfContents]
+other = "İçindekiler"
+
+[newer]
+other = "Sonraki"
+
+[older]
+other = "Önceki"
+
+# partials/header.html
+#
+[menu]
+other = "Menü"
+
+[featuredImage]
+other = "Öne Çıkan Görsel"
