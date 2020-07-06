@@ -1,3 +1,13 @@
 {{- if .Site.DisqusShortname }}
 {{ template "_internal/disqus.html" . }}
 {{- end }}
+
+{{ if .Site.Params.utterances }}
+<script src="https://utteranc.es/client.js"
+        repo="{{.Site.Params.utterances.repo}}"
+        issue-term="{{.Site.Params.utterances.issueTerm | default "pathname"}}"
+        theme="{{.Site.Params.utterances.theme | default "github-dark"}}"
+        crossorigin="anonymous"
+        async>
+</script>
+{{ end }}
