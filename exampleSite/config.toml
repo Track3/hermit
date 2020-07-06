@@ -40,6 +40,13 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
   footerCopyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
   # bgImg = ""  # Homepage background-image URL
 
+  # Comments using https://utteranc.es
+  # [params.utterances]
+  #   repo = "repo/path"
+  #   theme = "github-dark"
+  #   issueTerm = "pathname"
+  #   label="comments"
+
   # Prefix of link to the git commit detail page. GitInfo must be enabled.
   # gitUrl = "https://github.com/username/repository/commit/"
 
