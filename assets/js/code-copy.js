@@ -36,7 +36,11 @@
     var codeEl = containerEl.firstElementChild;
     copyBtn.addEventListener('click', function() {
       try {
-        var selection = selectText(codeEl);
+        if(codeEl.firstElementChild instanceof HTMLTableElement) {
+          var selection = selectText(codeEl.firstElementChild.firstElementChild.firstElementChild.lastElementChild);
+        } else {
+          var selection = selectText(codeEl);
+        }
         document.execCommand('copy');
         selection.removeAllRanges();
 
