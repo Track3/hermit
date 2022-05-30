@@ -58,6 +58,17 @@ Use [RealFaviconGenerator](https://realfavicongenerator.net/) to generate these 
 * safari-pinned-tab.svg
 * site.webmanifest
 
+## [Add hugo contact form](https://fabform.io/a/hugo-contact-form)
+
+```
+<form action="https://fabform.io/f/{form-id}" method="post">
+ <label for="email">Your Email</label>
+ <input name="email" type="email">
+ <button type="submit">Submit</button> 
+</form>
+```
+
+
 #### Social icons
 
 The following icons are supported, please make sure the `name` filed is exactly one of these:
